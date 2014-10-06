@@ -1,0 +1,21 @@
+.row
+  .col-md-12.text-center
+    .well.controls
+      = link_to calendar_path(date: @date - 1.month), class: "btn btn-default" do
+        %i.glyphicon.glyphicon-backward
+      = "#{@date.strftime("%B")} #{@date.year}"
+      = link_to calendar_path(date: @date + 1.month), class: "btn btn-default" do
+        %i.glyphicon.glyphicon-forward
+      = link_to new_event_path, class: "btn btn-default pull-right" do
+        Add Event
+.row
+  .col-md-12
+.row
+  .col-md-12
+    = calendar @date do |date|
+      = date.day
+      - events.each do |e|
+        - if e.from_date <= date and e.to_date >= date
+          %br
+          = link_to event_path(e), class: 'btn btn-default' do
+            = e.name

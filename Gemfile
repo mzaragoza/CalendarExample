@@ -16,12 +16,27 @@ gem 'newrelic_rpm', '~> 3.7.1.188'
 #gem 'resque-scheduler', :require => 'resque_scheduler', :git => 'git://github.com/resque/resque-scheduler.git'
 #gem 'resque-status'
 
-gem 'sass-rails', '~> 4.0.0'
-gem 'uglifier', '>= 1.3.0'
+
+#layout
+gem 'bootstrap-sass'
 gem 'coffee-rails', '~> 4.0.0'
+gem 'haml'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'sass-rails', '~> 4.0.0'
+gem 'simple_form'
 gem 'turbolinks'
+gem 'uglifier', '>= 1.3.0'
+
+#tools
+gem 'awesome_print'
+gem 'browser'
+gem 'decent_exposure', :git => 'git://github.com/voxdolo/decent_exposure.git'
+gem 'fabrication-rails'
+gem 'ffaker'
 gem 'jbuilder', '~> 1.2'
+gem 'json'
+#gem 'twilio-ruby'
 
 #Development
 group :development do
