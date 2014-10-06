@@ -1,0 +1,12 @@
+.widget-body.innerAll.inner-2x
+  = simple_form_for([:users, event], html: {class: 'form-horizontal clearfix', novalidate: true}) do |f|
+    - event.errors.full_messages.each do |e|
+      %li=e
+    = f.input :name
+    = f.input :description
+    = f.input :from_date
+    = f.input :from_time 
+    = f.input :to_date
+    = f.input :to_time
+    = f.button :submit, class: 'btn btn-primary btn-large pull-right', disable_with: 'Creating...'
+

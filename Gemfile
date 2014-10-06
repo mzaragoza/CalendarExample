@@ -16,6 +16,8 @@ gem 'newrelic_rpm', '~> 3.7.1.188'
 #gem 'resque-scheduler', :require => 'resque_scheduler', :git => 'git://github.com/resque/resque-scheduler.git'
 #gem 'resque-status'
 
+#security
+gem 'devise'
 
 #layout
 gem 'bootstrap-sass'
@@ -60,7 +62,6 @@ group :development, :test do
   gem 'launchy'
   gem 'letter_opener'
   gem 'populator'
-  gem 'pry-rails'
   gem 'rspec-rails', '~> 2.0'
   gem 'selenium-webdriver'
   gem 'watir-webdriver'
